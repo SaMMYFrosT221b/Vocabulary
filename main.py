@@ -13,32 +13,38 @@ class Vocab:
         df = pd.read_csv("words.csv")
         print(df)
 
-    def check():
+    def check(new_word):
         df = pd.read_csv("words.csv")
         for i in df["Words"]:
             if i == new_word:
                 return True
         return False
 
+    def Good_Morning():
+        df = pd.read_csv("word.csv")
+        print(df)
+
 
 if __name__ == "__main__":
     Word = Vocab()
 
-    print("To see: 1, To exit: -1")
+    Word.Good_Morning()
 
-    while True:
-        new_word = input("Enter the word: ")
+    # print("To see: 1, To exit: -1")
 
-        if Word.check(new_word):
-            print(f"{new_word} Already Exist")
-            continue
+    # while True:
+    #     new_word = input("Enter the word: ")
 
-        if new_word == "-1":
-            break
+    #     if Word.check(new_word):
+    #         print(f"{new_word} Already Exist")
+    #         continue
 
-        if new_word == "1":
-            Word.see()
+    #     if new_word == "-1":
+    #         break
 
-        new_mean = input("Enter the meaning: ")
+    #     if new_word == "1":
+    #         Word.see()
 
-        Word.add_words(new_word, new_mean)
+    #     new_mean = input("Enter the meaning: ")
+
+    #     Word.add_words(new_word, new_mean)
