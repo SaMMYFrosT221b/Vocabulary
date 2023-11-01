@@ -5,16 +5,16 @@ import csv
 class Vocab:
     def add_words(word, mean):
         new_row = [word, mean]
-        with open("word.csv", mode="a", newline="") as file:
+        with open("words.csv", mode="a", newline="") as file:
             writer = csv.writer(file)
             writer.writerow(new_row)
 
     def see():
-        df = pd.read_csv("word.csv")
+        df = pd.read_csv("words.csv")
         print(df)
 
     def check():
-        df = pd.read_csv("word.csv")
+        df = pd.read_csv("words.csv")
         for i in df["Words"]:
             if i == new_word:
                 return True
